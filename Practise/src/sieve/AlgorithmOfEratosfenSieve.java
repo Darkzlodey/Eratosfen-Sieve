@@ -2,24 +2,26 @@ package sieve;
 
 public class AlgorithmOfEratosfenSieve {
     public static final int SIZE = 100_000_000;
-   public static boolean isPrimeNumber[] = new boolean[SIZE];
+    public boolean isPrimeNumber[] = new boolean[SIZE];
 
-    public static void  createArrayOfPrimeNumbers(){
-        for (int i = 1; i < isPrimeNumber.length; i++) {
-            isPrimeNumber[i] = true;
+    public void AlgorithmOfEratosfenSieve() {
+
+        for (int number = 1; number < isPrimeNumber.length; number++) {
+            isPrimeNumber[number] = true;
         }
-        for (int everyNumberIndex = 2; everyNumberIndex * everyNumberIndex < SIZE; everyNumberIndex++) {
-            if (isPrimeNumber[everyNumberIndex]) {
-                for (int notPrimeNumberIndex = everyNumberIndex * everyNumberIndex; notPrimeNumberIndex < SIZE; notPrimeNumberIndex += everyNumberIndex) {
-                    isPrimeNumber[notPrimeNumberIndex] = false;
+        for (int number = 2; number * number < SIZE; number++) {
+            if (isPrimeNumber[number]) {
+                for (int notPrimeNumber = number * number; notPrimeNumber < SIZE; notPrimeNumber += number) {
+                    isPrimeNumber[notPrimeNumber] = false;
                 }
             }
         }
     }
-    public static   int countPrimeNumbers(int firstNumber, int lastNumber) {
+
+    public int countPrimeNumbers(int firstNumber, int lastNumber) {
         int numberOfPrimeElementsInInterval = 0;
-        for (int everyNumberIndex = firstNumber; everyNumberIndex < lastNumber + 1; everyNumberIndex++) {
-            if (isPrimeNumber[everyNumberIndex]) {
+        for (int number = firstNumber; number < lastNumber + 1; number++) {
+            if (isPrimeNumber[number]) {
                 numberOfPrimeElementsInInterval++;
             }
         }
