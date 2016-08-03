@@ -4,7 +4,7 @@ public class AlgorithmOfEratosfenSieve {
     public static final int SIZE = 100_000_000;
     public boolean isPrimeNumber[] = new boolean[SIZE];
 
-    public void AlgorithmOfEratosfenSieve() {
+     AlgorithmOfEratosfenSieve() {
 
         for (int number = 1; number < isPrimeNumber.length; number++) {
             isPrimeNumber[number] = true;

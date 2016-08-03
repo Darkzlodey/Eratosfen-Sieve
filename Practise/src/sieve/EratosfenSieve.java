@@ -10,7 +10,6 @@ public class EratosfenSieve {
         int firstNumber = 0, lastNumber = 0;
 
         AlgorithmOfEratosfenSieve eratosfenSieve = new AlgorithmOfEratosfenSieve();
-        eratosfenSieve.AlgorithmOfEratosfenSieve();
         while (input.hasNextInt()) {
             firstNumber = input.nextInt();
             lastNumber = input.nextInt();
